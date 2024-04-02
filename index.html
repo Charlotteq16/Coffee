@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COFFEE</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Pangolin&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="chalkboard">
+
+        <h1>Coffee Menu</h1>
+       
+    <div class="sidenav">
+
+        <button class="dropdown-btn">Caffeine % 
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <button id="buttons" class="btn" onclick="filterObjects('high')">High</button>
+            <button id="buttons" class="btn" onclick="filterObjects('moderate')">Moderate</button>
+            <button id="buttons" class="btn" onclick="filterObjects('low')">Low</button>
+        </div>
+
+        <button class="dropdown-btn">Taste
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+              <button id="buttons" class="btn" onclick="filterObjects('sweet')">Sweet</button>
+              <button id="buttons" class="btn" onclick="filterObjects('bitter')">Bitter</button>
+              <button id="buttons" class="btn" onclick="filterObjects('BS')">Bitter-sweet</button>
+          </div>
+
+          <button class="dropdown-btn"> Temperature
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+              <button id="buttons" class="btn" onclick="filterObjects('hot')">Hot</button>
+              <button id="buttons" class="btn" onclick="filterObjects('cold')">Cold</button>
+              <button id="buttons" class="btn" onclick="filterObjects('optional')">Optional</button>
+          </div>
+
+          <button class="dropdown-btn"> Country of Origin
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+              <button id="buttons" class="btn" onclick="filterObjects('italy')">Italy</button>
+              <button id="buttons" class="btn" onclick="filterObjects('spain')">Spain</button>
+              <button id="buttons" class="btn" onclick="filterObjects('mexico')">Mexico</button>
+              <button id="buttons" class="btn" onclick="filterObjects('USA')">USA</button>
+              <button id="buttons" class="btn" onclick="filterObjects('russia')">Russia</button>
+              <button id="buttons" class="btn" onclick="filterObjects('japan')">Japan</button>
+              <button id="buttons" class="btn" onclick="filterObjects('cuba')">Cuba</button>
+              <button id="buttons" class="btn" onclick="filterObjects('australia')">Australia</button>
+              <button id="buttons" class="btn" onclick="filterObjects('Austria')">Austria</button>
+              <button id="buttons" class="btn" onclick="filterObjects('UK')">UK</button>
+              <button id="buttons" class="btn" onclick="filterObjects('greece')">Greece</button>
+              <button id="buttons" class="btn" onclick="filterObjects('portugal')">Portugal</button>
+              <button id="buttons" class="btn" onclick="filterObjects('france')">France</button>
+              <button id="buttons" class="btn" onclick="filterObjects('ireland')">Ireland</button>
+              
+        
+          </div>
+
+          <button class="dropdown-btn"> Special Ingredient
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+              <button id="buttons" class="btn" onclick="filterObjects('chocolate')">Chocolate</button>
+              <button id="buttons" class="btn" onclick="filterObjects('vanilla-sugar')">Vanilla sugar</button>
+              <button id="buttons" class="btn" onclick="filterObjects('whipped-cream')">Whipped cream</button>
+              <button id="buttons" class="btn" onclick="filterObjects('chicory')">Chicory</button>
+              <button id="buttons" class="btn" onclick="filterObjects('lemon')">Lemon</button>
+              <button id="buttons" class="btn" onclick="filterObjects('butter')">Butter</button>
+              <button id="buttons" class="btn" onclick="filterObjects('icecream')">Icecream</button>
+              <button id="buttons" class="btn" onclick="filterObjects('alcohol')">Alcohol</button>
+          </div>
+
+          <button id="all" class="btn" onclick="filterObjects('all')">All</button>
+      </div>
+
+
+<div class="scroll-div">
+    <div class="objects">
+        
+        <div class="container">
+        <div class="box BS hot italy moderate "><img src="coffeeIMG/cappucino.jpg" alt="cappucino" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Cappucino</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box BS hot spain moderate"><img src="coffeeIMG/cortado.jpg" alt="cortado" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Cortado</div>
+        </div>
+    </div>
+
+<div class="container">
+        <div class="box sweet optional italy moderate"><img src="coffeeIMG/latte.jpg" alt="latte" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+        <div class="text">Latte</div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter hot high"><img src="coffeeIMG/red eye.jpg" alt="red eye" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Red Eye</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet optional USA chocolate moderate"><img src="coffeeIMG/mocha.jpg" alt="mocha" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Mocha</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet hot russia vanilla-sugar low"><img src="coffeeIMG/raf.jpg" alt="raf" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Raf</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter optional italy moderate"><img src="coffeeIMG/macchiato.jpg" alt="macchiato" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Macchiato</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet cold japan high"><img src="coffeeIMG/cold brew.jpg" alt="cold brew" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Cold brew</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet hot cuba moderate"><img src="coffeeIMG/cafe cubano.jpg" alt="cafe cubano" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Cafe Cubano</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter hot italy moderate"><img src="coffeeIMG/Cafe Lungo.jpg" alt="cafe lungo" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Cafe Lungo</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter hot portugal low"><img src="coffeeIMG/Galao.jpg" alt="Galao" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Galão</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter hot italy high"><img src="coffeeIMG/espresso.jpg" alt="espresso" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Espresso</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet hot italy whipped-cream moderate"><img src="coffeeIMG/espresso-con-panna.jpg" alt="espresso-con-panna" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Espresso con Panna</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter hot italy lemon high"><img src="coffeeIMG/espresso romano.jpg" alt="espresso romano" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Espresso Romano</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box BS cold UK alcohol moderate"><img src="coffeeIMG/espressoMartini.jpg" alt="espressoMartini" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Espresso Martini</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter optional high"><img src="coffeeIMG/nitro.jpg" alt="nitro" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Nitro</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter hot italy high"><img src="coffeeIMG/long black.jpg" alt="long black" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Long Black</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter hot australia moderate"><img src="coffeeIMG/flat white.jpg" alt="flat white" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Flat White</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet cold greece low"><img src="coffeeIMG/frappe.jpg" alt="frappe" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Frappe</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet hot USA butter moderate"><img src="coffeeIMG/bullet proof.jpg" alt="bullet" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Bullet Proof</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet hot italy high"><img src="coffeeIMG/ristretto.jpg" alt="ristretto" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Ristretto</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box BS cold italy icecream low"><img src="coffeeIMG/affogato.jpg" alt="affogato" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Affogato</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter hot france low"><img src="coffeeIMG/cafe au lait.jpg" alt="cafe au lait" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Cafe au Lait</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box BS optional ireland alcohol moderate"><img src="coffeeIMG/irish coffee.jpg" alt="irish" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Irish Coffee</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet hot Austria moderate"><img src="coffeeIMG/vienna coffee.jpg" alt="vienna coffee" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Vienna Coffee</div>
+        </div>
+    </div>
+
+<div class="container">
+        <div class="box bitter hot moderate"><img src="coffeeIMG/drip coffee.jpg" alt="drip" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Drip Coffee</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box sweet cold greece low"><img src="coffeeIMG/freddo.jpg" alt="freddo" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Freddo</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box bitter optional USA high"><img src="coffeeIMG/americano.jpg" alt="americano" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Americano</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box BS optional france chicory low"><img src="coffeeIMG/chicory.jpg" alt="chicory" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Chicory</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box BS optional mexico Moderate"><img src="coffeeIMG/mexican.jpg" alt="mexican" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Mexican Coffee</div>
+        </div>
+    </div>
+
+
+        <div class="container">
+        <div class="box sweet hot australia"><img src="coffeeIMG/piccolo latte.jpg" alt="piccolo" width="100%" height="100%" class="image"></div>
+        <div class="overlay">
+            <div class="text">Piccolo</div>
+        </div>
+        </div>
+
+<div class="container">
+        <div class="box BS optional low"><img src="coffeeIMG/Decaf.jpg" alt="decaf" width="100%" height="100%" class="image"> </div>
+        <div class="overlay">
+            <div class="text">Decaf</div>
+        </div>
+    </div>
+
+
+    </div>
+
+    </div>
+
+</div>
+     
+
+    
+
+      <script src="script.js"></script>
+</body>
+</html>
